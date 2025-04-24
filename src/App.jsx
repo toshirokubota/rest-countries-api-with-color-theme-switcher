@@ -21,15 +21,19 @@ function App() {
               //console.log(data);
               data.sort((a,b) => a.name.common.localeCompare(b.name.common));
               setCountries(data);
+              console.log('# of countries loaded = ', data.length)
           })
           .catch(error => {
             console.error('Fetch Error:', error);
-          });
+          })
+          .finally(() => {
+            console.log('done fetching the data.')
+          })
   }, []);
 
   return (
     <CountryContext.Provider value={{countries}}>
-    <BrowserRouter>
+    <BrowserRouter basename='rest-countries-api-with-color-theme-switcher'>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<CountryContainer />} />
