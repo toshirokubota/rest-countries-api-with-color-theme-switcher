@@ -37,6 +37,10 @@ header button {
   cursor: pointer;
 }
 
+button:focus, button:hover {
+  transform: scale(1.1);
+}
+
 .filter-country-card {
   position: relative;
 }
@@ -58,6 +62,9 @@ header button {
   background-color: hsl(var(--secondary-background-color));
   padding: 1rem;
 }
+.region-list-box label:hover, .region-list-box label:focus {
+  opacity: 0.9;
+}
 .region-list-box input[type=checkbox] {
   border: none;
   outline: none;
@@ -67,14 +74,18 @@ header button {
   position: relative;
 }
 .region-list-box input[type=checkbox]::before {
-  content: "✔"; /* Adds a check mark */
+  content: "✔";
   position: absolute;
   top: -0.5rem;
   left: 0;
-  display: none; /* Hidden when unchecked */
+  display: none;
 }
 .region-list-box input[type=checkbox]:checked::before {
-  display: block; /* Shows the check mark when checked */
+  display: block;
+}
+.region-list-box input[type=checkbox]:focus::before {
+  display: block;
+  opacity: 0.5;
 }
 
 .country-search-nav {

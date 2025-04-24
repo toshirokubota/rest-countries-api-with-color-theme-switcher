@@ -15,7 +15,7 @@ export default function CountryContainer() {
     const location = useLocation();
     const region = useParams();
     const [searchParams, setSearchParams] = useSearchParams();
-    console.log('CountryContainer: ', location, region, searchParams, countries);
+    //console.log('CountryContainer: ', location, region, searchParams, countries);
 
     useEffect(() => {
         console.log('CountryContainer: inside 1st useEffect().', 

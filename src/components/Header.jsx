@@ -1,18 +1,18 @@
 import {useState, useEffect} from 'react';
 
 export default function Header() {
-    const themeKey = 'theme';
-    const [theme, setTheme] = useState('light');
+    const themeKey = 'mytheme';
+    const [theme, setTheme] = useState(()=> {
+        return localStorage.getItem(themeKey) || 'light';
+    });
+
     useEffect(()=> {
-        const item = localStorage.getItem('themeKey');
-        if(item) {
-            setTheme(item);
+        //console.log('setting the theme attribute to = ', theme);
+        if(theme === 'light' || theme === 'dark') {
+            const body = document.querySelector('body');
+            body.setAttribute('data-theme', theme);
+            localStorage.setItem(themeKey, theme);
         }
-    }, []);
-    useEffect(()=> {
-        const body = document.querySelector('body');
-        body.setAttribute('data-theme', theme);
-        localStorage.setItem(themeKey, theme);
     }, [theme]);
 
     function themeToggle() {

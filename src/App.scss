@@ -44,6 +44,10 @@ header {
     }
 }
 
+button:focus, button:hover {
+    transform: scale(1.1);
+}
+
 .filter-country-card {
     position: relative;
     button {
@@ -64,6 +68,10 @@ header {
     background-color: hsl(var(--secondary-background-color));
     padding: 1rem;
 
+    label:hover, label:focus {
+        opacity: 0.9;
+    }    
+
     input[type="checkbox"] {
         border: none;
         outline: none;
@@ -73,17 +81,19 @@ header {
         position: relative;
     }
     input[type="checkbox"]::before {
-        content: "✔"; /* Adds a check mark */
-        //font-size: 20px;
-        //color: green;
+        content: "✔"; 
         position: absolute;
         top: -0.5rem;
         left: 0;
-        display: none; /* Hidden when unchecked */
+        display: none; 
     }
     
     input[type="checkbox"]:checked::before {
-        display: block; /* Shows the check mark when checked */
+        display: block; 
+    }
+    input[type="checkbox"]:focus::before {
+        display: block; 
+        opacity: 0.5;
     }
 }
 
