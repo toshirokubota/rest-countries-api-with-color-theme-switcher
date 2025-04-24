@@ -1,0 +1,145 @@
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+  background-color: inherit;
+  color:inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 400;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  background-color: inherit;
+  color:inherit;
+}
+
+:root {
+  font-family: "Nunito Sans", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 16px;
+
+  /* Typography */
+  --fs-headerM: 18px;
+  --fs-headerS: 14px;
+  --fs-headerXS: 12px;
+  --fs-body: 16px;
+  --fs-bodyS: 14px;
+  --fs-bodyXS: 12px;
+  /* Color */
+  --color-dark-blue: 209 23% 22%;
+  --color-very-dark-blue-bg: 207 26% 17%;
+  --color-very-dark-blue-txt: 200 15% 8%;
+  --color-gray: 0 0% 52%;
+  --color-light-gray: 0 0% 70%;
+  --color-lighter-gray: 0 0% 77%;
+  --color-lightest-gray: 0 0% 98%;
+  --color-white: 0 0% 100%;
+  --color-black: 0 0% 0%;
+
+  --color-red: 4 69% 50%;
+  --color-lime: 61 70% 52%;
+
+  --primary-background-color: var(--color-lightest-gray);
+  --secondary-background-color: var(--color-white);
+  --primary-text-color: var(--color-very-dark-blue-txt);
+  --primary-border-color: var(--color-gray);
+  --primary-shadow-color: var(--color-black);
+}
+
+[data-theme="dark"] {
+  --primary-background-color: var(--color-very-dark-blue-bg);
+  --secondary-background-color: var(--color-dark-blue);
+  --primary-text-color: var(--color-white);
+  --primary-border-color: var(--color-dark-blue);
+  --primary-shadow-color: var(--color-white);
+}
+
+a {
+  text-decoration: none;
+  color: hsl(var(--primary-text-color));
+  cursor: pointer;
+}
+button {
+  color: hsl(var(--primary-text-color));
+  /* background-color: hsl(var(--primary-background-color)); */
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+i {
+  margin-inline: 0.5rem;
+}
+
+.font-headerM {
+  font-size: var(--fs-headerM);
+  /* color: #111517; */
+  font-weight: 800;
+  line-height: 26px;
+  letter-spacing: 0px;
+}
+.font-headerS {
+  font-size: var(--fs-headerS);
+  /* color: #111517; */
+  font-weight: 800;
+  line-height: 20px;
+  letter-spacing: 0px;
+}
+.font-headerXS {
+  font-size: var(--fs-headerXS);
+  /* color: #111517; */
+  font-weight: 600;
+  line-height: auto;
+  letter-spacing: 0px;
+}
+.font-bodyS {
+  font-size: var(--fs-bodyS);
+  line-height: 16px;
+}
+.font-bodyXS {
+  font-size: var(--fs-bodyXS);
+  line-height: 20px;
+}
+
+.font-black {
+  color: hsl(var(--color-very-dark-blue-txt));
+}
+.font-light {
+  font-weight: 300;
+}
+.font-semibold {
+  font-weight: 500;
+}
+.hidden {
+  display: none;
+}
