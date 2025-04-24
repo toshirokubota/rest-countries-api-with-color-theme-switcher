@@ -38,6 +38,10 @@ Users should be able to:
 
 ### Links
 
+- Solution URL: [https://github.com/toshirokubota/rest-countries-api-with-color-theme-switcher](https://github.com/toshirokubota/rest-countries-api-with-color-theme-switcher)
+- Live Site URL: [https://toshirokubota.github.io/rest-countries-api-with-color-theme-switcher/](https://toshirokubota.github.io/rest-countries-api-with-color-theme-switcher/)
+
+
 ## My process
 
 ### Built with
